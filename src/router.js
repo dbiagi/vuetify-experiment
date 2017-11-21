@@ -33,3 +33,4 @@ router.path = routeName => {
 }
 
 export default router
+

@@ -8,7 +8,7 @@ describe('CategoryRepository.findAll()', () => {
 
     it('the Promise should resolve to an array', () => {
         return CategoryRepository.findAll()
-            .then(data => assert.typeOf(data, 'array'))
+            .then(data => assert.typeOf(data, 'Array'))
     })
 
     it('the Promise should resolve to an array of objects containing requried fields', () => {

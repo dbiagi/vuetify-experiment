@@ -1,29 +1,24 @@
 <template lang="pug">
     div
         v-layout(row, wrap)
-            v-flex(v-for="i in 6", xs5, mr-3, mb-3 :key="i")
-                v-card
-                    v-card-media(:src="getTeaImage()", height="200px")
-
-
+            v-flex(v-for="module in modules", md2, mr-3, mb-3, :key="module.slug")
+                router-link(:to="{name:'home'}")
+                    v-card
+                        v-card-media(:src="module.img", height="200px")
+                        v-card-title {{ module.title }}
 </template>
 
 <script>
-    import {teaGenerator} from '@/fixtures/image'
-
-    let generator = teaGenerator()
-
     export default {
         name: 'module-menu',
         data() {
             return {}
         },
         computed: {
-        },
-        methods: {
-            getTeaImage() {
-                return generator.next().value
+            modules() {
+                return this.$store.state.module.modules
             }
-        }
+        },
+        methods: {}
     }
 </script>
