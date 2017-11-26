@@ -1,10 +1,5 @@
 const modules = [
     {
-        slug: 'classifieds',
-        title: 'Classifieds',
-        img: '/static/img/shoes.jpeg'
-    },
-    {
         slug: 'deals',
         title: 'Deals',
         img: '/static/img/giftbox.jpeg'
