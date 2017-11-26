@@ -1,4 +1,4 @@
-import ModuleRepository from '@/api/module'
+import ModuleRepository from '@/api/ModuleRepository'
 
 describe('ModuleRepository.findAll()', () => {
     it('should return a promisse', () => {
