@@ -1,10 +1,10 @@
 <template lang="pug">
-    div
-        v-layout(row, wrap)
-            v-flex(v-for="module in modules", md2, mr-3, mb-3, :key="module.slug")
-                router-link(:to="{name:'home'}")
+    v-container(fluid, grid-list-md)
+        v-layout(row, wrap, justify-space-between)
+            v-flex(v-for="module in modules", md4, xs12, sm6, :key="module.slug")
+                router-link(:to="{name: module.slug}")
                     v-card
-                        v-card-media(:src="module.img", height="200px")
+                        v-card-media(:src="module.img", :height="height")
                         v-card-title {{ module.title }}
 </template>
 
@@ -12,7 +12,9 @@
     export default {
         name: 'module-menu',
         data() {
-            return {}
+            return {
+                height: '200px'
+            }
         },
         computed: {
             modules() {

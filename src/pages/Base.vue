@@ -10,7 +10,9 @@
 
     export default {
         created() {
-            this.$store.dispatch('fetch_modules')
+            Promise.all([
+                this.$store.dispatch('fetch_modules'),
+            ]).then(e => console.log('All loaded'))
         },
         components: {SearchToolbar}
     }

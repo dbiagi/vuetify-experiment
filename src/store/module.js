@@ -1,4 +1,4 @@
-import ModuleRepository from '@/api/module'
+import ModuleRepository from '@/api/ModuleRepository'
 
 export const TYPES = {
     FETCH_MODULES: 'FETCH_MODULES'
@@ -16,7 +16,6 @@ const actions = {
 
 const mutations = {
     [TYPES.FETCH_MODULES](state, data) {
-        console.log(state, data)
         state.modules = data
     }
 }

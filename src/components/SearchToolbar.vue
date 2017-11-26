@@ -1,7 +1,8 @@
 <template lang="pug">
     v-toolbar
-        v-toolbar-side-icon
-            v-icon business
+        router-link(:to="{name:'home'}")
+            v-toolbar-side-icon
+                v-icon business
         v-toolbar-title {{ application }}
         v-spacer
         search-field
