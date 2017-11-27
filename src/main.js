@@ -19,12 +19,10 @@ Vue.use(Vuetify, {
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
-let vue = new Vue({
+window.vue = new Vue({
     el: '#app',
     router,
     store,
     template: '<App/>',
     components: {App}
 })
-
-window.vue = vue
