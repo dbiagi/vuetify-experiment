@@ -1,10 +1,12 @@
 <template lang="pug">
     v-container
         v-layout(wrap)
-            v-flex(v-for="listing in listings", xs12, sm6, md3, :key="listing.id")
+            v-flex(v-for="listing in listings", xs12, sm6, md4, :key="listing.id")
                 v-card
                     v-card-media(:src="listing.img", :height="cardHeight")
                     v-card-title {{listing.title}}
+        .text-xs-center
+            v-pagination(:length="pages", v-model="currentPage")
 
 </template>
 
@@ -16,15 +18,19 @@
                 page: this.currentPage,
                 itensPerPage: this.itensPerPage
             })
+            this.$store.dispatch('fetch_listings_count')
         },
         data() {
             return {
-                cardHeight: "200px"
+                cardHeight: "400px"
             }
         },
         computed: {
             listings() {
                 return this.$store.state.listing.listings
+            },
+            pages() {
+                return Math.ceil(this.$store.state.listing.total/this.itensPerPage)
             }
         },
         props: {

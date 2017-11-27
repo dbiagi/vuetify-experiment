@@ -11,3 +11,9 @@ describe('ListingRepository.findAll()', () => {
         })
     })
 })
+
+describe('ListingRepository.countAll()', () => {
+    it('should return a number', () => {
+        ListingRepository.countAll().then(count => assert.typeOf(count, 'Number'))
+    })
+})

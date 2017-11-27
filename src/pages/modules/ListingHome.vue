@@ -11,7 +11,7 @@
         name: 'listing-home',
         data() {
             return {
-                itensPerPage: 12
+                itensPerPage: 9
             }
         },
         computed: {

@@ -9,7 +9,7 @@ export const TYPES = {
 const state = {
     featured: [],
     listings: [],
-    listingsCount: null,
+    total: null,
 }
 
 const actions = {
@@ -23,7 +23,7 @@ const actions = {
         })
     },
     fetch_listings_count({commit}) {
-        ListingRepository.countAll(count => commit(TYPES.FETCH_LISTINGS_COUNT, count))
+        ListingRepository.countAll().then(count => commit(TYPES.FETCH_LISTINGS_COUNT, count))
     },
     fetch_listings({commit}, params) {
         let itensPerPage = params.itensPerPage
@@ -43,7 +43,7 @@ const mutations = {
         state.listings = data
     },
     [TYPES.FETCH_LISTINGS_COUNT](state, count) {
-        state.listingsCount = count
+        state.total = count
     }
 }
 
