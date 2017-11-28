@@ -16,7 +16,7 @@ describe('ModuleRepository.findAll()', () => {
             .then(data => {
                 let module = data.pop()
 
-                let expectedKeys = ['slug', 'title', 'img']
+                let expectedKeys = ['slug', 'title']
 
                 assert.hasAllKeys(module, expectedKeys)
             })

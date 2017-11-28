@@ -1,7 +1,5 @@
-import {teaGenerator} from '@/fixtures/image'
+import ImageFixtures from '../fixtures/ImageFixtures'
 import faker from 'faker'
-
-let gen = teaGenerator()
 
 let categories = []
 
@@ -10,7 +8,7 @@ for (let i = 0; i < 6; i++) {
     categories.push({
         id: i+1,
         slug: faker.helpers.slugify(title),
-        img: gen.next().value
+        img: ImageFixtures.get('tea')
     })
 }
 

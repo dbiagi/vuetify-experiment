@@ -4,7 +4,6 @@
             v-flex(v-for="module in modules", md4, xs12, sm6, :key="module.slug")
                 router-link(:to="{name: module.slug}")
                     v-card
-                        v-card-media(:src="module.img", :height="height")
                         v-card-title {{ module.title }}
 </template>
 

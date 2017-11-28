@@ -1,14 +1,13 @@
 import faker from 'faker'
-import {teaGenerator} from '@/fixtures/image'
+import ImageFixtures from '../fixtures/ImageFixtures'
 
 let listings = []
-let teaImageGenerator = teaGenerator()
 
 for (let i = 0; i < 20; i++) {
     listings.push({
         id: i+1,
         title: faker.lorem.sentence(faker.random.number({min: 1, max: 3})),
-        img: teaImageGenerator.next().value
+        img: ImageFixtures.get('tea')
     })
 }
 

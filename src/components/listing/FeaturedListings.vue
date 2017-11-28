@@ -1,7 +1,6 @@
 <template lang="pug">
     div
-        v-layout(row)
-            h1 {{ title }}
+        h1 {{ title }}
         v-container(grid-list-md)
             v-layout(row, wrap, justify-space-between)
                 v-flex(v-for="listing in listings", md3, xs12, sm6, :key="listing.id")

@@ -18,7 +18,7 @@ const actions = {
 
         let limit = params.limit || null
 
-        ListingRepository.findAll(limit).then(data => {
+        ListingRepository.findFeatured(limit).then(data => {
             commit(TYPES.FETCH_FEATURED_LISTINGS, data)
         })
     },
