@@ -2,15 +2,15 @@
     v-container
         v-carousel
             v-carousel-item(
-                v-for="banner in banners",
-                :key="banner.id",
+                v-for="(banner,i) in banners",
+                :key="i",
                 :src="banner.img"
             )
 </template>
 
 <script>
     export default {
-        name: 'home-banner',
+        name: 'banner',
         created() {
             this.$store.dispatch('fetch_home_banners')
         },

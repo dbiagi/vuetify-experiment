@@ -4,8 +4,6 @@ import Login from './pages/Login.vue'
 import Home from './pages/Home.vue'
 import Base from './pages/Base.vue'
 import ListingHome from './pages/modules/ListingHome.vue'
-import DealHome from './pages/modules/DealHome.vue'
-import EventHome from './pages/modules/EventHome.vue'
 
 Vue.use(VueRouter)
 
@@ -27,17 +25,6 @@ const router = new VueRouter({
                     component: ListingHome,
                     props: { id: { default: 'eita'} }
                 },
-                {
-                    name: 'deals',
-                    path: '/deals/:page?',
-                    component: DealHome
-
-                },
-                {
-                    name: 'events',
-                    path: '/events/:page?',
-                    component: EventHome
-                }
             ]
         },
         {
