@@ -1,30 +1,33 @@
-# business-finder-frontend
+# vuetify experiment
 
-> A Vue.js project
+## Intro
+This project was an experiment with [Vue](http://vuejs.org), [Vuex](https://vuex.vuejs.org/en/) and [Vuetifyjs](http://vuetifyjs.com).
 
-## Build Setup
+The initial goal was develop a client side interface to CRUD listings, events and deals.
 
-``` bash
-# install dependencies
+The api was mocked using promises and setTimeout to emulate the request delay.
+
+## Screenshots
+
+
+
+## Instalation
+1) Clone this repository
+
+2) Install all dependencies
+
+```
 npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+3) Compile, serve and hot reload the application
+
+```
+npm start
+```
+
+## Conclusion
+
+I almost deleted this project, as it is just a small PoC of what I can achieve with vuetify, but I'll keep it for future reference.
+
+I fell in some pitfalls with vuex, vue-router and the vuetify itself, so I'll keep this as implementation example and, perhaps, a boilerplate for future projects.
