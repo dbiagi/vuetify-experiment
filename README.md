@@ -7,8 +7,9 @@ The initial goal was develop a client side interface to CRUD listings, events an
 
 The api was mocked using promises and setTimeout to emulate the request delay.
 
-## Screenshots
+## Screenshot
 
+![Application Screenshoot](https://github.com/dbiagi/vuetify-experiment/blob/master/screenshot.jpg)
 
 
 ## Instalation
