@@ -1,4 +1,4 @@
-# vuetify experiment
+# vuetify experiment | [![Build Status](https://travis-ci.org/dbiagi/vuetify-experiment.svg?branch=master)](https://travis-ci.org/dbiagi/vuetify-experiment)
 
 ## Intro
 This project was an experiment with [Vue](http://vuejs.org), [Vuex](https://vuex.vuejs.org/en/) and [Vuetifyjs](http://vuetifyjs.com).
