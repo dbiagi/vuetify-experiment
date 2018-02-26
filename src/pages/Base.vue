@@ -9,9 +9,6 @@
     import SearchToolbar from '../components/SearchToolbar.vue'
 
     export default {
-        created() {
-
-        },
         components: {SearchToolbar}
     }
 </script>
