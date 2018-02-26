@@ -9,7 +9,6 @@
                 h1 All Listings
             v-flex(xs12)
                 all-listings(:currentPage=1, :itensPerPage=6)
-
 </template>
 
 <script>
